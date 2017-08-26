@@ -1,2 +1,0 @@
-# ShiftManager
-Shift Manager
