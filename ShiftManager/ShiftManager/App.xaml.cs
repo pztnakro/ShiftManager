@@ -15,24 +15,36 @@ namespace ShiftManager
 			SetMainPage();
 		}
 
-		public static void SetMainPage()
-		{
-            Current.MainPage = new TabbedPage
-            {
-                Children =
+        public static void SetMainPage() => Current.MainPage = new TabbedPage
+        {
+            Children =
                 {
-                    new NavigationPage(new ItemsPage())
+                    new NavigationPage(new CalendarPage())
                     {
-                        Title = "Browse",
+                        Title = "Shift",
                         Icon = Device.OnPlatform<string>("tab_feed.png",null,null)
                     },
-                    new NavigationPage(new AboutPage())
+                    new NavigationPage(new ItemsPage())
                     {
-                        Title = "About",
+                        Title = "Work",
+                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
+                    },
+                    new NavigationPage(new SalaryHistory())
+                    {
+                        Title = "Salary",
+                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
+                    },
+                    new NavigationPage(new Feedback())
+                    {
+                        Title = "Feedback",
+                        Icon = Device.OnPlatform<string>("tab_about.png",null,null)
+                    },
+                    new NavigationPage(new Settings())
+                    {
+                        Title = "Settings",
                         Icon = Device.OnPlatform<string>("tab_about.png",null,null)
                     },
                 }
-            };
-        }
-	}
+        };
+    }
 }

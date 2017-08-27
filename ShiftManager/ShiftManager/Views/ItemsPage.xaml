@@ -5,7 +5,7 @@
               Title="{Binding Title}"
              x:Name="BrowseItemsPage">
   <ContentPage.ToolbarItems>
-  	<ToolbarItem Text="Add Item" Clicked="AddItem_Clicked" />
+  	<ToolbarItem Text="Add Work" Clicked="AddWork_Clicked" />
   </ContentPage.ToolbarItems>
   <ContentPage.Content>
     <StackLayout>
@@ -21,15 +21,15 @@
         <ListView.ItemTemplate>
           <DataTemplate>
             <ViewCell>
-              <StackLayout Padding="10">
+              <StackLayout Padding="20">
                 <Label Text="{Binding Text}"
                        LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemTextStyle}"
-                       FontSize="16"/>
+                       FontSize="24"/>
                 <Label Text="{Binding Description}"
                        LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13"/>
+                       FontSize="16"/>
               </StackLayout>
             </ViewCell>
           </DataTemplate>

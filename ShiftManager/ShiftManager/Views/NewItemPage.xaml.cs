@@ -16,8 +16,8 @@ namespace ShiftManager.Views
 
 			Item = new Item
 			{
-				Text = "Item name",
-				Description = "This is a nice description"
+				Text = "Work name",
+				Description = "A simple description"
 			};
 
 			BindingContext = this;
@@ -25,7 +25,7 @@ namespace ShiftManager.Views
 
 		async void Save_Clicked(object sender, EventArgs e)
 		{
-			MessagingCenter.Send(this, "AddItem", Item);
+			MessagingCenter.Send(this, "AddWork", Item);
 			await Navigation.PopToRootAsync();
 		}
 	}

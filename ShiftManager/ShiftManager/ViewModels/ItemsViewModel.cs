@@ -17,11 +17,11 @@ namespace ShiftManager.ViewModels
 
 		public ItemsViewModel()
 		{
-			Title = "Browse";
+			Title = "Work Places";
 			Items = new ObservableRangeCollection<Item>();
 			LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-			MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+			MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddWork", async (obj, item) =>
 			{
 				var _item = item as Item;
 				Items.Add(_item);

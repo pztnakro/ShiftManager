@@ -30,7 +30,7 @@ namespace ShiftManager.Views
 			ItemsListView.SelectedItem = null;
 		}
 
-		async void AddItem_Clicked(object sender, EventArgs e)
+		async void AddWork_Clicked(object sender, EventArgs e)
 		{
 			await Navigation.PushAsync(new NewItemPage());
 		}
